@@ -3,9 +3,9 @@
  * Prof. Orlewilson Maia
  * 
  * Autor: 	Orlewilson Maia
- * Data:	10/10/2016
+ * Data:	04/11/2016
  * 
- * Descrição: Classe para represetar dados de um aluno
+ * Descrição: Classe para represetar dados de um aluno com herança
  * 
  */
 

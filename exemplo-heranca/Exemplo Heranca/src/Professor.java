@@ -3,58 +3,54 @@
  * Prof. Orlewilson Maia
  * 
  * Autor: 	Orlewilson Maia
- * Data:	10/10/2016
+ * Data:	04/11/2016
  * 
- * Descrição: Classe para represetar dados de um professor
+ * Descrição: Classe para representar dados de um professor com herança
  * 
  */
 
-public class Professor {
+public class Professor extends Usuario {
 
 	// atributos
-	private String nome;
-	private String cpf;
 	private String disciplinas;
 	private String titulacao;
-	
+
 	// construtor
-	public Professor(String nome, String cpf, String disciplinas, String titulacao){
-		this.nome = nome;
-		this.cpf = cpf;
+	public Professor(String nome, String cpf, String disciplinas,
+			String titulacao) {
+		super(nome, cpf);
+
 		this.disciplinas = disciplinas;
 		this.titulacao = titulacao;
 	}
-	
+
 	// métodos para acessar e manipular dados dos atributos
-	public void setNome(String nome){
-		this.nome = nome;
-	}
-	
-	public String getNome(){
-		return this.nome;
-	}
-	
-	public void setCpf(String cpf){
-		this.cpf = cpf;
-	}
-	
-	public String getCpf(){
-		return this.cpf;
-	}
-	
-	public void setTitulacao(String titulacao){
+	public void setTitulacao(String titulacao) {
 		this.titulacao = titulacao;
 	}
-	
-	public String getTitulacao(){
+
+	public String getTitulacao() {
 		return this.titulacao;
 	}
-	
-	public void setDisciplinas(String disciplinas){
+
+	public void setDisciplinas(String disciplinas) {
 		this.disciplinas = disciplinas;
 	}
-	
-	public String getDisciplinas(){
+
+	public String getDisciplinas() {
 		return this.disciplinas;
+	}
+
+	public void imprimirDados() {
+
+		// Primeira forma
+		// System.out.println("Nome: " + getNome());
+		// System.out.println("CPF: " + getCpf());
+
+		// Segunda forma
+		super.imprimirDados();
+
+		System.out.println("Titulação: " + getTitulacao());
+		System.out.println("Disciplinas: " + getDisciplinas());
 	}
 }
